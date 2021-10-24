@@ -16,7 +16,8 @@
 \pagestyle{headings}
 
 \title{Detekcia malwaru pomocou hlbokého učenia 
-založeného na vízii\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Fedor Lehocki}} % meno a priezvisko vyučujúceho na cvičeniach
+založeného na vízii
+\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Fedor Lehocki}} % meno a priezvisko vyučujúceho na cvičeniach
 
 \author{Jakub Martinak\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
@@ -48,74 +49,25 @@ strojovému učeniu.
 
 \section{Úvod}
 
-Túto tému som si vybral z dôvodu nárastu kybernetických útokov vo svete a následnej obrane voči nim pomocou moderných technológií a využitím umelej inteligencie. V prvej časti článku sa budem venovať modelovanie v softwarovom inžinierstve~\ref{modelovanie}. Druhá časť sa bude zaoberať ~\ref{nedávnemu PROGRESU v kybernetickej bezpečnosti}, z ktorej následne prejdem na hlavnú tému tohto článku ~\ref{Detekcia malwaru pomocou hlbokého učenia 
-založeného na vízii}.
+Túto tému som si vybral z dôvodu nárastu kybernetických útokov vo svete a následnej obrane voči nim pomocou moderných technológií a využitím umelej inteligencie. V prvej časti článku sa budem venovať modelovanie v softwarovom inžinierstve~\ref{modelovanie}. Druhá časť sa bude zaoberať nedávnemu pokroku v kybernetickej bezpečnosti~\ref{kyberneticka_bezpecnost}, z ktorej následne prejdem na hlavnú tému tohto článku Detekcia malwaru pomocou hlbokého učenia založeného na vízii ~\ref{malware}.
 Záverečné poznámky prináša časť~\ref{zaver}.
 
 
 
 \section{Modelovanie v Softwarovom inžinierstve} \label{modelovanie}
-
-Z obr.~\ref{f:rozhod} je všetko jasné. 
-
-\begin{figure*}[tbh]
-\centering
-%\includegraphics[scale=1.0]{diagram.pdf}
-
-\end{figure*}
+Softwérové modelovanie je oveľa viac ako len algoritmus v programe alebo samotná funkcia, malo by poukazovať na celý softwérový desing, vrátane rozhrania, interakcií s iným softwérom a všetky softwérové funkcie. Pre objektovo-orientované programy, je používaný objektovo modelovací jazyk ako UML, ktorý je použitý na vytvorenie softwérového dizajnu. Takmer vo všetkých prípadoch je použitý určitý druh modelovacieho jazyka na vytvorenie dizajnu. Tento prístup umožňuje dizajnérovy programu vyskúšať rôzne dizajny a vyvodiť, ktorý bude najlepší ako finálne riešenie. Je to podobný proces ako pri navrhovaní štruktúry a dizajnu domu, začne sa náčrtom skice poschodí a rozložením izieb. Kreslenie je v tomto prípade modelovací jazyk a výsledkom toho je návrh, ktorý môže byť použitý ako finálny dizajn. Následne sa bude pokračovať upravovaním náčrtu až náš návrh nebude obsahovať všetky naše potreby, jedine vtedy by sme mali začať s využivaním materiálu, v našom prípade písaním kódu. Výhodou dizajnovania programu použitím modelovacieho jazyka je nájdenie problémov v skorom štádiu a jeho vyriešením bez nutnosti menenia kódu.
 
 
 
-\section{Iná časť} \label{ina}
+\section{Nedávne pokroky v Kybernetickej Bezpečnosti} \label{kyberneticka_bezpecnost}
 
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
 
 Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
 
-
-\subsection{Nejaké vysvetlenie} \label{ina:nejake}
-
-Niekedy treba uviesť zoznam:
-
-\begin{itemize}
-\item jedna vec
-\item druhá vec
-	\begin{itemize}
-	\item x
-	\item y
-	\end{itemize}
-\end{itemize}
-
-Ten istý zoznam, len číslovaný:
-
-\begin{enumerate}
-\item jedna vec
-\item druhá vec
-	\begin{enumerate}
-	\item x
-	\item y
-	\end{enumerate}
-\end{enumerate}
+\section{Detekcia malwaru pomocou hlbokého učenia založeného na vízii} \label{malware}
 
 
-\subsection{Ešte nejaké vysvetlenie} \label{ina:este}
-
-\paragraph{Veľmi dôležitá poznámka.}
-Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
-
-
-
-\section{Dôležitá časť} \label{dolezita}
-
-
-
-
-\section{Ešte dôležitejšia časť} \label{dolezitejsia}
-
-
-
-
-\section{Záver} \label{zaver} % prípadne iný variant názvu
+%\section{Záver} \label{zaver} % prípadne iný variant názvu
 
 
 
@@ -123,6 +75,6 @@ Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom
 
 
 % týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-\bibliography{literatura}
-\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+%\bibliography{literatura}
+%\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
 \end{document}
