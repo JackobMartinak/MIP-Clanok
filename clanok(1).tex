@@ -75,7 +75,8 @@ Medzi najtradičnejšie prostriedky na zlepšenie softvérovej bezpečnosti patr
 Môže sa zdať, že problém vlastne nejestvuje\cite{Joanne:MSE}, ale bolo dokázané, že to tak nie je~\cite{Edward:SS}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
 
 \section{Detekcia malwaru pomocou hlbokého učenia založeného na vízii} \label{malware}
-
+\subsection{Úvod}
+Detekcia a klasifikácia malvéru je jedným z najväčších problémov v kybernetickej bezpečnosti. Metódy založené na báze podpisov, sú efektívne iba proti už známim malvérom, ale sú veľmi neefektívne proti neznámim malvérom. Autori malvérov použivajú techniky ako šifrovanie, packovanie, atď. na už známom malvéry aby predišli detekcií, čo má za následok vačšie množstvo nového malvéru. Súbory s rovnakým malvérovým správaním zapadajú do rovnakej rodiny malvéru. Tieto súbory su neustále upravované použivaním rozličných taktík, čo ich robí veľmi rozličnými.\newline \\ Tieto množstvá súborov sú neskôr zaradené do ich reprezentatívnej rodiny pomocou efektívneho klasifikovania a procesu detekcie malvéru. Veľa exitujúcich klasifikátorov malvéru extraktuje zásadné vlastnosti zo súborov malvéru a trénuje strojový model s týmito vlastnosťami. Trénovaný model vie potom rozoznať rozdiel medzi malvérom a cleanvérom. Klasifikátory čelia mnoho výzvam, pretože taktiky ako šifrovanie, packing a iné jemné úpravy malvéru, môžu spôsobiť únik pred klasifikátorom, čiže takýto malvér nemusí byť zachytený. Vlastnosti, ktoré sú extrahované z týchto upravených malvérov, nevykazujú žiadne dôkazy pre klasifikátor a teda toto spôsobí nezachytenie malvéru. \newline \\ Potreba priblížiť detekciu malvéru do bodu kde budu extrahované robustné časti akéhokoľvek upraveného skriptu malvéru. Ďaľšie varianty existujúceho malvéru by mali byť už zachytené týmto systémom. 
 %\section{Záver} \label{zaver} % prípadne iný variant názvu
 
 
