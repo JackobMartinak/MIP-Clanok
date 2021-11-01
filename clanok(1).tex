@@ -25,7 +25,7 @@ založeného na vízii
 	{\small \texttt{xmartinakj@stuba.sk}}
 	}
 
-\date{\small 11. oktober 2021} % upravte
+\date{\small 11. oktober 2021}
 
 
 
@@ -60,6 +60,15 @@ Softwérové modelovanie je oveľa viac ako len algoritmus v programe alebo samo
 
 
 \section{Nedávne pokroky v Kybernetickej Bezpečnosti} \label{kyberneticka_bezpecnost}
+\subsection{Pokročilá detekcia Malwéru}
+Napriek pokrokom v metodólógií programovania, tak táto metodológia má stále veľký vplyv na bezpečnosť softwéru. Komunita zaoberajúva sa kybernetickou bezpečnosťou, sa hlavne sústredí na detekciu samotného malwéru. Práve vtedy keď všetkých záujem je v zamedzení zneužitia chýb, tak existuje zhoda, že pri extémne komplexnom a časovo náročnom kóde to je priam nemožné zabrániť takýmto chybám.
+ \newline
+\\
+Kým klasivké metódy detekcie malwéru spočívajú v zhode aplikačného kódu bez zmien, tak moderné metódy sú založené na kontrole správania, aby sa zistilo či ide o neprijateľnú aktivitu alebo nie. Kontrola správania je možná, vďaka dynamickému zabezpečeniu virtuálnych mašín, kde je následne možné bezpečne spustiť nebezpečný súbor. Bez takýchto virtuálne uzavretých prostredí by takáto analýza bola príliš nebezpečná pre produkčné systémy.
+ \newline
+\\
+Moderný výskum v detekcií malwéru zahŕňa strojové učenie, ktoré je nápomocné v identifikovaní škodlivého kódu na báze vzoriek. Tak isto ako sú AI-Systémy neustále hústené obrázkami rôznych zvierat aby sa ich naučili rozoznávať, tak to isté sa deje aj v kybernetickej bezpečnosti len namiesto fotiek zvierat je vkladaných veľké množstvo "obrázkov" súborov, ktoré sú infikované malwérom. Techniky hlbokého učenia využívajú paralelizmus na vylepšenie efektivity algoritmov. 
+\subsection{Dospelosť softwérového procesu}
 
 
 Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
@@ -75,6 +84,6 @@ Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dok
 
 
 % týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-%\bibliography{literatura}
-%\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+\bibliography{literatura}
+\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
 \end{document}
