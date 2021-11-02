@@ -35,22 +35,21 @@ založeného na vízii
 
 \begin{abstract}
 Keďže v 21. storočí je čím ďalej tím viac potreba chrániť naše elektronické 
-zariadenia pred nebezpečným malwarom tak sa chcem zamerať na túto tému 
+zariadenia pred nebezpečným malvérom tak sa chcem zamerať na túto tému 
 v oblasti informačnej bezpečnosti a implementovanie strojového učenia do nej.
-V tomto článku na začiatku objasním modelovanie v softwarovom inžinierstve 
+V tomto článku na začiatku objasním modelovanie v softvérovom inžinierstve 
 a ako to súvisí s mojou témou a neskôr sa budem zameriavať na presnosť 
 určenia či sa jedná o malware alebo nie pomocou Deep Learning Vision
 a taktiež budem rozoberať problémy a výhody spojené s touto formou 
-detekcie, výhody a nevýhody klasickej detekcie malwaru a jeho limity oproti 
+detekcie, výhody a nevýhody klasickej detekcie malvéru a jeho limity oproti 
 strojovému učeniu.
 \end{abstract}
 
 
-
 \section{Úvod}
 
-Túto tému som si vybral z dôvodu nárastu kybernetických útokov vo svete a následnej obrane voči nim pomocou moderných technológií a využitím umelej inteligencie. V prvej časti článku sa budem venovať modelovanie v softwarovom inžinierstve~\ref{modelovanie}. Druhá časť sa bude zaoberať nedávnemu pokroku v kybernetickej bezpečnosti~\ref{kyberneticka_bezpecnost}, z ktorej následne prejdem na hlavnú tému tohto článku Detekcia malwaru pomocou hlbokého učenia založeného na vízii ~\ref{malware}.
-Záverečné poznámky prináša časť~\ref{zaver}.
+Túto tému som si vybral z dôvodu nárastu kybernetických útokov vo svete a následnej obrane voči nim pomocou moderných technológií a využitím umelej inteligencie. V prvej časti článku sa budem venovať modelovanie v softwarovom inžinierstve ~\ref{modelovanie}. Druhá časť sa bude zaoberať nedávnemu pokroku v kybernetickej bezpečnosti ~\ref{kyberneticka_bezpecnost}, z ktorej následne prejdem na hlavnú tému tohto článku Detekcia malwaru pomocou hlbokého učenia založeného na vízii ~\ref{malware}.
+Záverečné poznámky prináša časť ~\ref{zaver}.
 
 
 
@@ -61,9 +60,7 @@ Softvérové modelovanie je oveľa viac ako len algoritmus v programe alebo samo
 
 \section{Nedávne pokroky v Kybernetickej Bezpečnosti} \label{kyberneticka_bezpecnost}
 \subsection{Pokročilá detekcia Malvéru}
-Napriek pokrokom v metodólógií programovania, tak táto metodológia má stále veľký vplyv na bezpečnosť softvéru. Komunita zaoberajúva sa kybernetickou bezpečnosťou, sa hlavne sústredí na detekciu samotného malvéru. Práve vtedy keď všetkých záujem je v zamedzení zneužitia chýb, tak existuje zhoda, že pri extémne komplexnom a časovo náročnom kóde to je priam nemožné zabrániť takýmto chybám.
- \newline \\ Kým klasivké metódy detekcie malvéru spočívajú v zhode aplikačného kódu bez zmien, tak moderné metódy sú založené na kontrole správania, aby sa zistilo či ide o neprijateľnú aktivitu alebo nie. Kontrola správania je možná, vďaka dynamickému zabezpečeniu virtuálnych mašín, kde je následne možné bezpečne spustiť nebezpečný súbor. Bez takýchto virtuálne uzavretých prostredí by takáto analýza bola príliš nebezpečná pre produkčné systémy.
- \newline \\ Moderný výskum v detekcií malvéru zahŕňa strojové učenie, ktoré je nápomocné v identifikovaní škodlivého kódu na báze vzoriek. Tak isto ako sú AI-Systémy neustále hústené obrázkami rôznych zvierat aby sa ich naučili rozoznávať, tak to isté sa deje aj v kybernetickej bezpečnosti len namiesto fotiek zvierat je vkladaných veľké množstvo "obrázkov" súborov, ktoré sú infikované malvérom. Techniky hlbokého učenia využívajú paralelizmus na vylepšenie efektivity algoritmov. 
+Napriek pokrokom v metodólógií programovania, tak táto metodológia má stále veľký vplyv na bezpečnosť softvéru. Komunita zaoberajúva sa kybernetickou bezpečnosťou, sa hlavne sústredí na detekciu samotného malvéru. Práve vtedy keď všetkých záujem je v zamedzení zneužitia chýb, tak existuje zhoda, že pri extémne komplexnom a časovo náročnom kóde to je priam nemožné zabrániť takýmto chybám.\newline \\ Kým klasivké metódy detekcie malvéru spočívajú v zhode aplikačného kódu bez zmien, tak moderné metódy sú založené na kontrole správania, aby sa zistilo či ide o neprijateľnú aktivitu alebo nie. Kontrola správania je možná, vďaka dynamickému zabezpečeniu virtuálnych mašín, kde je následne možné bezpečne spustiť nebezpečný súbor. Bez takýchto virtuálne uzavretých prostredí by takáto analýza bola príliš nebezpečná pre produkčné systémy.\newline \\ Moderný výskum v detekcií malvéru zahŕňa strojové učenie, ktoré je nápomocné v identifikovaní škodlivého kódu na báze vzoriek. Tak isto ako sú AI-Systémy neustále hústené obrázkami rôznych zvierat aby sa ich naučili rozoznávať, tak to isté sa deje aj v kybernetickej bezpečnosti len namiesto fotiek zvierat je vkladaných veľké množstvo "obrázkov" súborov, ktoré sú infikované malvérom. Techniky hlbokého učenia využívajú paralelizmus na vylepšenie efektivity algoritmov. 
 
 
 \subsection{Dospelosť softvérového procesu}
@@ -76,7 +73,17 @@ Môže sa zdať, že problém vlastne nejestvuje\cite{Joanne:MSE}, ale bolo dok�
 
 \section{Detekcia malwaru pomocou hlbokého učenia založeného na vízii} \label{malware}
 \subsection{Úvod}
-Detekcia a klasifikácia malvéru je jedným z najväčších problémov v kybernetickej bezpečnosti. Metódy založené na báze podpisov, sú efektívne iba proti už známim malvérom, ale sú veľmi neefektívne proti neznámim malvérom. Autori malvérov použivajú techniky ako šifrovanie, packovanie, atď. na už známom malvéry aby predišli detekcií, čo má za následok vačšie množstvo nového malvéru. Súbory s rovnakým malvérovým správaním zapadajú do rovnakej rodiny malvéru. Tieto súbory su neustále upravované použivaním rozličných taktík, čo ich robí veľmi rozličnými.\newline \\ Tieto množstvá súborov sú neskôr zaradené do ich reprezentatívnej rodiny pomocou efektívneho klasifikovania a procesu detekcie malvéru. Veľa exitujúcich klasifikátorov malvéru extraktuje zásadné vlastnosti zo súborov malvéru a trénuje strojový model s týmito vlastnosťami. Trénovaný model vie potom rozoznať rozdiel medzi malvérom a cleanvérom. Klasifikátory čelia mnoho výzvam, pretože taktiky ako šifrovanie, packing a iné jemné úpravy malvéru, môžu spôsobiť únik pred klasifikátorom, čiže takýto malvér nemusí byť zachytený. Vlastnosti, ktoré sú extrahované z týchto upravených malvérov, nevykazujú žiadne dôkazy pre klasifikátor a teda toto spôsobí nezachytenie malvéru. \newline \\ Potreba priblížiť detekciu malvéru do bodu kde budu extrahované robustné časti akéhokoľvek upraveného skriptu malvéru. Ďaľšie varianty existujúceho malvéru by mali byť už zachytené týmto systémom. 
+Detekcia a klasifikácia malvéru je jedným z najväčších problémov v kybernetickej bezpečnosti. Metódy založené na báze podpisov, sú efektívne iba proti už známim malvérom, ale sú veľmi neefektívne proti neznámim malvérom. Autori malvérov použivajú techniky ako šifrovanie, packovanie, atď. na už známom malvéry aby predišli detekcií, čo má za následok vačšie množstvo nového malvéru. Súbory s rovnakým malvérovým správaním zapadajú do rovnakej rodiny malvéru. Tieto súbory su neustále upravované použivaním rozličných taktík, čo ich robí veľmi rozličnými.\newline \\ Tieto množstvá súborov sú neskôr zaradené do ich reprezentatívnej rodiny pomocou efektívneho klasifikovania a procesu detekcie malvéru. Veľa exitujúcich klasifikátorov malvéru extraktuje zásadné vlastnosti zo súborov malvéru a trénuje strojový model s týmito vlastnosťami. Trénovaný model vie potom rozoznať rozdiel medzi malvérom a cleanvérom. Klasifikátory čelia mnoho výzvam, pretože taktiky ako šifrovanie, packing a iné jemné úpravy malvéru, môžu spôsobiť únik pred klasifikátorom, čiže takýto malvér nemusí byť zachytený. Vlastnosti, ktoré sú extrahované z týchto upravených malvérov, nevykazujú žiadne dôkazy pre klasifikátor a teda toto spôsobí nezachytenie malvéru. \newline \\ Potreba priblížiť detekciu malvéru do bodu kde budu extrahované robustné časti akéhokoľvek upraveného skriptu malvéru. Ďaľšie varianty existujúceho malvéru by mali byť už zachytené týmto systémom. \newline \\Sú tu analyzované spustiteľné binárne súbory s malvérom a cleanvérom použitím techniky založenej na analýze videnia. Autori malvéru znovu používajú rovnaké segmenty kódu na vygenerovanie nových variant malvéru. Vizualizácia malvéru bola nedávno použitá ako alternatíva a efektívny prístup k malvérovej analýze. Podobnosti variánt nebezpečného kódu  sú vizualizované a identifikované. Každá skupina malvéru vystavila určitý vzorec v malvérových obrázkoch. \newline \\Tieto vzorce v obrázkoch sú veľmi  podstatné vo vizuálnych podobách malvéru, ktorý zapadá do jednotlivých skupín. Ďaľšia výhoda Analýzy založenej na vízií je, že nie je potreba dynamickej exekúcie binárnych súborov. Vzorce vybraté z obrázkov jednotlivých malvérov sú potom následne použité pri trénovaní klasifikátora. Tieto vlastnosti môžu fungovať ako prezrádzajúci faktor na detekovanie výskytu vzorcov v obrázku a teda pomôže nájsť malvér a jeho nové varianty. \newline \\Binárne súbory s malvérom sú konvertované do 8 bitových vektorov pozostávajúcich z reťazca núl a jednotiek a sú organizované do dvojdimenzálnej matice formujúcej obrázky v šedých farbách. Autorovia týchto malvérov zmenia malú časť binárneho súboru a obrázky tieto malé zmeny zachytia v globálnej štruktúre. Obrázok 1 zobrazuje niekoľko vzorcov v obrázkoch malvéru v troch datasetoch. Podobnosť vo vzorcoch je vidno viac v jedlotivých skupinách malvéru rovnakej rodiny. 
+\begin{figure}[h]
+\caption{Podobnosť obrázkov jednotlivých rodín malvéru}
+\centering
+\includegraphics[scale=0.7]{obrazok1.jpg}
+\end{figure}
+\newline \\Ďaľší krok v procese je extrahovať vlastnosti týchto vzorcov z obrázkov a trénovať klasifikátor s týmito vlastnosťami. Techniky Data miningu a strojového učenia sú použité na vytvorenie inteligetnej detekcie malvéru a systémy klasifikátorov.  Hlboké neurónové siete dosiahli veľký úspech v rôznych odvetiach, najmä v odvetí počitačového videnia. Aj keď modely hlbokého učenia sú výkonné, tak majú určité limity v realnych úlohach detekcie, hlavne v bezpečnostných doménach. Efektivita detekcie nekatogarizovaného malvéru a prúd zero-day, je malá. \newline \\Modely hlbokého učenia sú trénované na spätnom šírení, kde je model trénovaný použitím stromového učenia. Keď zoberieme v potas všetky faktory, tak najlepší návrh je použiť algoritmus deep forest, ktorý má mnoho výhod oproti exitujúcim modelom strojového a hlbokého učenia. Má zlepšenú presnosť detekcie a nízku výpočtovú jednotku.
+
+
+
+
 %\section{Záver} \label{zaver} % prípadne iný variant názvu
 
 
